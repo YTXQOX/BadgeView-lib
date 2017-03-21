@@ -16,14 +16,14 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         ImageView iv = (ImageView) findViewById(R.id.tv);
-        BadgeTextView mBadgeTextView =new BadgeTextView(this);
+        BadgeTextView mBadgeTextView = new BadgeTextView(this);
         mBadgeTextView.setTargetView(iv);
         mBadgeTextView.setBadgeColor(Color.parseColor("#FF0000"));
         mBadgeTextView.setBadgeCount(0).setmDefaultTopPadding(4).setmDefaultRightPadding(4);
         mBadgeTextView.setBadgeShown(true);
 
         TextView tv2 = (TextView) findViewById(R.id.tv2);
-        BadgeTextView mBadgeTextView2 =new BadgeTextView(this);
+        BadgeTextView mBadgeTextView2 = new BadgeTextView(this);
         mBadgeTextView2.setBadgeShown(true);
         mBadgeTextView2.setTargetView(tv2);
         mBadgeTextView2.setBadgeCount(15).setmDefaultRightPadding(15).setmDefaultTopPadding(15);
