@@ -16,7 +16,7 @@ public class BadgeTextView extends android.support.v7.widget.AppCompatTextView i
     /**
      * 红点
      */
-    private com.ljstudio.badgeview.BadgeViewUtil mBaseBadgeView;
+    private com.ljstudio.badgeview.BadgeViewUtil badgeViewUtil;
 
     public BadgeTextView(Context context) {
         this(context, null);
@@ -28,53 +28,58 @@ public class BadgeTextView extends android.support.v7.widget.AppCompatTextView i
 
     public BadgeTextView(Context context, AttributeSet attrs, int defStyle) {
         super(context, attrs, defStyle);
-        mBaseBadgeView = new BadgeViewUtil(this, context, attrs);
+        badgeViewUtil = new BadgeViewUtil(this, context, attrs);
     }
 
     @Override
     protected void onSizeChanged(int w, int h, int oldw, int oldh) {
         super.onSizeChanged(w, h, oldw, oldh);
-        mBaseBadgeView.onSizeChanged(w, h);
+        badgeViewUtil.onSizeChanged(w, h);
     }
 
     @Override
     protected void onDraw(Canvas canvas) {
         super.onDraw(canvas);
-        mBaseBadgeView.draw(canvas);
+        badgeViewUtil.draw(canvas);
     }
 
     @Override
     public BadgeViewUtil setBadgeCount(int count) {
-        return mBaseBadgeView.setCount(count);
+        return badgeViewUtil.setCount(count);
     }
 
     @Override
     public BadgeViewUtil setBadgeShown(boolean isShowBadge) {
-        return mBaseBadgeView.setShown(isShowBadge);
+        return badgeViewUtil.setShown(isShowBadge);
     }
 
     @Override
     public BadgeViewUtil setBadgeColor(int color) {
-        return mBaseBadgeView.setBackgroundColor(color);
+        return badgeViewUtil.setBackgroundColor(color);
     }
 
     @Override
     public BadgeViewUtil setmDefaultTopPadding(int mDefaultTopPadding) {
-        return mBaseBadgeView.setmDefaultTopPadding(mDefaultTopPadding);
+        return badgeViewUtil.setmDefaultTopPadding(mDefaultTopPadding);
     }
 
     @Override
     public BadgeViewUtil setmDefaultRightPadding(int mDefaultRightPadding) {
-        return mBaseBadgeView.setmDefaultRightPadding(mDefaultRightPadding);
+        return badgeViewUtil.setmDefaultRightPadding(mDefaultRightPadding);
+    }
+
+    @Override
+    public BadgeViewUtil setBadgeRadius(int radius) {
+        return badgeViewUtil.setDefaultRadius(radius);
     }
 
     /*
-     * Attach the BadgeView to the TabWidget
-     *
-     * @param target the TabWidget to attach the BadgeView
-     *
-     * @param tabIndex index of the tab
-     */
+         * Attach the BadgeView to the TabWidget
+         *
+         * @param target the TabWidget to attach the BadgeView
+         *
+         * @param tabIndex index of the tab
+         */
     public void setTargetView(TabWidget target, int tabIndex) {
         View tabView = target.getChildTabViewAt(tabIndex);
         setTargetView(tabView);

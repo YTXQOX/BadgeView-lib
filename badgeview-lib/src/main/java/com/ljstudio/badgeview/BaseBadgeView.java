@@ -68,13 +68,18 @@ public class BaseBadgeView extends View implements IBadgeView {
         return mBadgeView.setmDefaultRightPadding(mDefaultRightPadding);
     }
 
+    @Override
+    public BadgeViewUtil setBadgeRadius(int radius) {
+        return mBadgeView.setDefaultRadius(radius);
+    }
+
     /*
-     * Attach the BadgeView to the TabWidget
-     *
-     * @param target the TabWidget to attach the BadgeView
-     *
-     * @param tabIndex index of the tab
-     */
+         * Attach the BadgeView to the TabWidget
+         *
+         * @param target the TabWidget to attach the BadgeView
+         *
+         * @param tabIndex index of the tab
+         */
     public void setTargetView(TabWidget target, int tabIndex) {
         View tabView = target.getChildTabViewAt(tabIndex);
         setTargetView(tabView);

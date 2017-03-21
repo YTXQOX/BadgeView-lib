@@ -156,6 +156,7 @@ public class BadgeViewUtil {
             } else {//椭圆
                 canvas.drawRoundRect(rectF, (int) (mBadgeWidth * 0.6), (int) (mBadgeWidth * 0.6), mPaint);
             }
+
             if (mCount > 0) {
                 temp = mCount + "";
                 if (mCount > 99) {
@@ -278,10 +279,10 @@ public class BadgeViewUtil {
     /**
      * 设置红点视图上边距
      *
-     * @param mDefaultTopPadding
+     * @param defaultTopPadding
      */
-    public BadgeViewUtil setmDefaultTopPadding(int mDefaultTopPadding) {
-        this.mDefaultTopPadding = mDefaultTopPadding;
+    public BadgeViewUtil setmDefaultTopPadding(int defaultTopPadding) {
+        this.mDefaultTopPadding = defaultTopPadding;
         mView.invalidate();
         return this;
     }
@@ -289,10 +290,10 @@ public class BadgeViewUtil {
     /**
      * 设置红点视图右边距
      *
-     * @param mDefaultRightPadding
+     * @param defaultRightPadding
      */
-    public BadgeViewUtil setmDefaultRightPadding(int mDefaultRightPadding) {
-        this.mDefaultRightPadding = mDefaultRightPadding;
+    public BadgeViewUtil setmDefaultRightPadding(int defaultRightPadding) {
+        this.mDefaultRightPadding = defaultRightPadding;
         mView.invalidate();
         return this;
     }

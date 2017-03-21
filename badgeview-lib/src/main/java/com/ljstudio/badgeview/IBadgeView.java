@@ -41,4 +41,12 @@ public interface IBadgeView {
      * @return
      */
     com.ljstudio.badgeview.BadgeViewUtil setmDefaultRightPadding(int mDefaultRightPadding);
+
+    /**
+     * 设置红点半径大小
+     *
+     * @param radius
+     * @return
+     */
+    com.ljstudio.badgeview.BadgeViewUtil setBadgeRadius(int radius);
 }

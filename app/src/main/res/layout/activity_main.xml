@@ -20,13 +20,13 @@
             android:gravity="center">
 
             <ImageView
-                android:id="@+id/iv"
+                android:id="@+id/id_tv1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:background="#999"
-                android:src="@mipmap/ic_launcher"
-                android:gravity="center" />
+                android:gravity="center"
+                android:src="@mipmap/ic_launcher" />
         </FrameLayout>
 
         <FrameLayout
@@ -36,16 +36,15 @@
             android:background="#55ff0000"
             android:gravity="center">
 
-            <TextView
-                android:id="@+id/tv2"
+            <ImageView
+                android:id="@+id/id_tv2"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_centerInParent="true"
                 android:layout_gravity="center"
                 android:background="#999"
-                android:drawableTop="@mipmap/ic_launcher"
                 android:gravity="center"
-                android:text="demo" />
+                android:src="@mipmap/ic_launcher" />
         </FrameLayout>
 
         <FrameLayout
@@ -62,7 +61,7 @@
                 android:background="#999"
                 android:drawableTop="@mipmap/ic_launcher"
                 android:gravity="center"
-                android:text="demo"
+                android:text="panpang"
                 app:badge_count="200"
                 app:badge_none_show="true"
                 app:badge_padding_right="2dp"
@@ -84,7 +83,7 @@
                 android:background="#999"
                 android:drawableTop="@mipmap/ic_launcher"
                 android:gravity="center"
-                android:text="demo" />
+                android:text="panpang" />
 
             <com.ljstudio.badgeview.BaseBadgeView
                 android:layout_width="wrap_content"
